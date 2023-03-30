@@ -11560,13 +11560,7 @@ pre .code {
     
 
   }
-  @media (max-width: 767.98px) {
-  .header .header-content  {
-   color: #090909;
-      
-    }
-  }
-
+  
   @media (max-width: 450px) {
     .header {
       height: 500px;
@@ -11575,12 +11569,7 @@ pre .code {
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imgs/mobile_view.jpeg);
      
     }
-    @media (max-width: 450px) {
-  .header .header-content  {
-   color: #090909;
-      
-    }
-  }
+   
   .header .social-icons {
     margin: auto;
   }
