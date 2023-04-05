@@ -8,6 +8,21 @@
     <title>Swaraj Portfolio</title>
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 	<link rel="stylesheet" href="assets/css/johndoe.css">
+	
+  <style>
+      @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+        
+      #count{
+        font-size: 30px;
+        margin: 0;
+      }
+
+      #demo{
+        color: rgba(247, 131, 131, 0.8);
+        letter-spacing: 2px;
+        font-size: 10px;
+      }
+    </style>
    
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -147,7 +162,7 @@
                             <P class="subtitle">Protecting electronic devices, networks, and sensitive information from unauthorized access, theft, damage, or other malicious attacks. IT risk refers to the potential for financial loss, operational disruption, or reputational damage resulting from the failure of an organization's IT systems or processes</P>
                             <hr>
                             <h6 class="title text-danger">2021-2022</h6>
-                            <P>Cyber Security Analyst <b> (Cyber Vidapeeth) </b></P>
+                            <P>Cyber Security Analyst <b> (Cyber Vidyapeeth) </b></P>
                             <P class="subtitle">I worked under networks, and critical information from cyber attacks that could compromise national security and also on a range of tactics such as threat intelligence gathering, vulnerability assessments, penetration testing, and incident response planning</P>
                             <hr>
                             <h6 class="title text-danger">2017-2018</h6>
@@ -460,8 +475,7 @@
     <section class="section bg-dark py-5">
         <div class="container text-center">
             <h2 class="text-light mb-5 font-weight-normal">Available For Guidance    </h2> <button class="btn bg-primary w-lg" >Email Me</button>
-            
-        </div>
+            </div>
     </section>
  
 
@@ -727,8 +741,8 @@
             </div>
         </div>
     </section>
-	    
 	    <hr>
+	    
 	
 <section>
     <div class="section contact" id="contact">
@@ -795,6 +809,12 @@
         </div>
     </div>
     </section>
+    <section>
+	    <div class="container text-center">
+        <!-- <h4 class="text-light mb-5 font-weight-normal" id="vist">Visit Count </h4>  -->
+	    <h1 id="count"></h1> <p id="demo"> Visit Count </p>
+            </div>
+    </section>
 <!--     <footer class="footer py-3">
         <div class="container">
             <p class="small mb-0 text-light">
@@ -818,6 +838,19 @@
 
     <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
+
+    <script>
+      const countEl = document.getElementById("count");
+      countvisits();
+
+      function countvisits() {
+        fetch('https://api.countapi.xyz/update/Swaraj/portfolio.com/?amount=1')
+          .then((res) => res.json())
+          .then((res) => {
+            countEl.innerHTML = res.value;
+          });
+      }
+    </script>
 
 </body>
 </html>
